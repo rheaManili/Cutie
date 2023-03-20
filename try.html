@@ -1,0 +1,384 @@
+<html lang="en">
+<head>
+    
+    <title>Sign Up Validation</title>
+     
+    
+</head>
+<style>
+  body {
+    background-color: white;
+    font-family: arial;
+}
+p {
+    text-align: center;
+    font-size: 15px;
+}
+
+#form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+td label {
+    font-size: 12px;
+    
+}
+.birthdate {
+    width: 300px;
+    border-radius: 4px;
+    font-size: 12px;
+
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    
+    background-color: #1ebe67;
+    border: none;
+    border-radius: 20px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+.birthdate .error {
+    color: #ff3860;
+    font-size: 9px;
+    
+}
+.day {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 13px;
+}
+.month {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 13px;
+}
+.year {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 13px;
+}
+ .top {
+  
+   text-decoration: none;
+   
+ }
+ .facebook {
+   margin: auto;
+   text-align: center;
+   width: 70%;
+   background-color: #00578c;
+   border-radius: 30px;
+   padding: 10px;
+    border: 2px solid black;
+  
+ }
+ .google {
+   margin: auto;
+   text-align: center;
+   width: 70%;
+   background-color: white;
+   border-radius: 30px;
+   padding: 10px;
+   border: 2px solid black;
+
+  
+ }
+ .facebook a {
+   text-decoration: none;
+   color: white;
+   
+ 
+ }
+ .google a {
+   text-decoration: none;
+   color: black;
+
+ }
+ .google img {
+   border-radius: 50%;
+   
+ 
+ }
+ .facebook img {
+   border-radius: 50%;
+   }
+   #error {
+    color: #ff3860;
+    font-size: 9px;
+    
+   }
+</style>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+                 <h1>
+	  <img src="logo.png" width="150px" height="40px" /> <br /> </h1>
+    <p><b>Sign up for free to start listening.</b></p>
+       <div class="top">
+     <div class="facebook">
+     <a href=""><img src="facebook.png" width="20px" height="10px" /> Sign up with Facebook</a>
+      </div> <br>
+     <div class="google">
+      <a href=""><img src="google.png" height="10px" height="10px"  /> Sign up with Google</a>
+      </div>
+       </div>
+    <hr>
+    <p class="signup"><b>Sign up with your email address.</b></p>
+  
+	  
+            <div class="input-control">
+                <label for="Email">What's your Email?</label>
+                <input id="email" name="email" type="text" placeholder="Enter your email.">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email2">Confirm your email.</label>
+                <input id="email2" name="email2" type="text" placeholder="Enter your email again.">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Create a Password.</label>
+                <input id="password"name="password" type="password" placeholder="Create a password.">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="username">What should we call you?</label>
+                <input id="username"name="username" type="username" placeholder="Enter a profile name.">
+                 <label for="username">This appers on your profile</label>
+                <div class="error"></div>
+            </div>
+            
+                        <div class="Birthdate">
+                <label for="Birthdate">What is your date of birth?</label>
+                <br>
+
+   <table class="birthdate">
+         <tr>
+            <td><label for="password">Day</label></td>
+            <td><label for="password">Month</label></td>
+            <td><label for="password">Year</label></td>
+            </tr>
+            <tr>
+            <td>	   
+            <input type="number" id="day" name="day" class="day" placeholder="DD" />
+<div class="error"></div>
+            </td>
+ 
+           <td> 
+      <select id="month" name="month" class="month">
+	    <option value="month">Month</option>
+	    <option value="January">January</option>
+	    <option value="February">February</option>
+	    <option value="March">March</option>
+	    <option value="April">April</option>
+	    <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>	
+      <option value="August">August</option>
+	   <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+	   <option value="Decembers">December</option>
+	    </select>
+<div class="error"></div>
+          </td>
+           <td>
+           <input type="number" id="year" name="year" class="year" placeholder="YYYY" />
+<div class="error"></div>
+              </td>
+              </tr>
+              </table>
+              </div>
+
+              <br><b> Choose your favroite season: </b><br>  
+<input type="radio" name="gender" id="gender" value="male"> Male    
+<input type="radio" name="gender" id="gender" value="female"> Female    
+<input type="radio" name="gender" id="gender" value="Non-binary"> Non-binary 
+<input type="radio" name="gender" id="gender" value="Other"> Other  
+<input type="radio" name="gender" id="gender" value="Prefer not to say"> Prefer not to say   
+<div id="disp" style= "color:green"> </div>
+<div id="error" style= "color:red"></div>    
+  <input type="checkbox" name="optional" value="optional"> Share my registration data with Spotify's content providers for marketing purposes. <br /> <br />
+
+   <div class="agree">
+   <a>By clicking on sign-up, you agree to Spotify's <font color="#1ebe67"<a href="">Terms and Conditions of Use.</a></font> </a> <br>
+   <a>To learn more about how Spotify collects, uses, shares and protects your personal data, please see<font color="#1ebe67"<a href="">Spotify's Privacy Policy.</a></font> </a> </div>
+                              
+<button type="submit" onclick=" checkButton()"> Sign Up </button>   
+      
+
+             
+            
+        </form>
+    </div>
+    <script>
+      const form = document.getElementById('form');
+const email = document.getElementById('email');
+const email2 = document.getElementById('email2');
+const password = document.getElementById('password');
+const username = document.getElementById('username');
+const birthdate = document.getElementById('birthdate');
+
+function checkButton() {    
+            var getSelectedValue = document.querySelector(   
+                'input[name="gender"]:checked'); 
+
+
+           
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+
+
+const validateInputs = () => {
+  const emailValue = email.value.trim();
+  const email2Value = email2.value.trim();
+    const passwordValue = password.value.trim();
+    const usernameValue = username.value.trim();
+    const dayValue = day.value.trim();
+    const monthValue = month.value.trim();
+      const yearValue = year.value.trim();
+      
+
+    
+    if(emailValue === '') {
+        setError(email, 'You need to enter your email.');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'This email is invalid. Make sure it is written like example@email.com');
+    } else {
+        setSuccess(email);
+    }
+    
+    if(email2Value === '') {
+        setError(email2, 'You need to confirm your email.');
+    } else if (email2Value !== emailValue) {
+        setError(email2, "The email addresses don't match.");
+    } else {
+        setSuccess(email2);
+    }
+
+    if(passwordValue === '') {
+        setError(password, 'You need to enter a password.');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+if(usernameValue === '') {
+        setError(username, 'Enter a name for your profile.');
+    } else {
+        setSuccess(username);
+    }
+    if(dayValue === '') {
+        setError(day, 'Enter a valid day of the month.');
+    } else if (dayValue > '31') {
+        setError(day, 'Enter a valid day of the month.');
+    } else if (dayValue < '1') {
+        setError(day, 'Enter a valid day of the month.');
+    } else {
+        setSuccess(day);
+    }
+     
+if(monthValue === 'month') {
+        setError(month, 'Select your birth month.');
+    } else {
+        setSuccess(month);
+    }
+    if(yearValue === '') {
+        setError(year, 'Enter a valid year');
+    } else if (yearValue > '2017') {
+        setError(year, ' Sorry, you dont meet Spotifys age requirements.');
+    } else if (yearValue < '1900') {
+        setError(year, 'Enter a valid year');
+    } else {
+        setSuccess(year);
+    }
+
+   if(getSelectedValue != null) {   
+                document.getElementById("disp").innerHTML   
+                    = getSelectedValue.value   
+                    + " is selected";   
+            }   
+            else {   
+                document.getElementById("error").innerHTML   
+                    = "Select your gender";   
+            }   
+        }    
+};
+    </script>
+</body>
+</html>
